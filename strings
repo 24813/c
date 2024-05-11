@@ -1,0 +1,98 @@
+/* string : Write a C++ program to reverse a given string. 
+------"1"-------------------------------
+*/
+
+#include <iostream>
+#include <string>
+using namespace std; 
+string reverse_string(string str) {
+string temp_str = str; 
+int index_pos = 0; 
+for (int x = temp_str.length()-1; x >= 0; x--) 
+{
+str[index_pos] = temp_str[x]; 
+index_pos++; 
+}
+return str; 
+}
+int main() 
+{
+cout << "Original string: w3resource"; 
+cout << "\nReverse string: " <<
+reverse_string("w3resource"); 
+cout << "\n\nOriginal string: Python"; 
+cout << "\nReverse string: " <<
+reverse_string("Python"); 
+return 0; 
+}
+
+==================================================================================================================
+/*--------------------------------------------------------
+---
+Write a C++ program to change every letter in a given 
+string with the letter following it in the alphabet (i.e. 
+a becomes b, p becomes q, z becomes a).
+-------------"2"----------------------------------*/
+
+#include <iostream>
+#include <string>
+using namespace std; 
+string change_letter(string str) {
+int char_code; 
+for (int x = 0; x < str.length(); x++)
+{
+char_code = int(str[x]); 
+if (char_code == 122)
+{
+str[x] = char(97);
+}
+else if (char_code == 90)
+{
+str[x] = char(65);
+}
+else if (char_code >= 65 && char_code <= 90 ||
+char_code >= 97 && char_code <= 122)
+{
+str[x] = char(char_code + 1); 
+}
+}
+return str; 
+int main()
+{
+cout << "Original string: w3resource"; 
+cout << "\nNew string: " <<
+change_letter("w3resource"); 
+cout << "\n\nOriginal string: Python";
+cout << "\nNew string: " << change_letter("Python");
+return 0; 
+}
+==================================================================================================================
+/*--------------------------------------------------------
+-----------
+Write a C++ program to capitalize the first letter of each 
+word in a given string. Words must be separated by only 
+one space.
+---------------"3"----------------------------------------
+--------*/
+
+#include <iostream>
+#include <string>
+using namespace std; 
+string Capitalize_first_letter(string text) {
+for (int x = 0; x < text.length(); x++)
+{
+if (x == 0 || text[x - 1] == ' ')
+{
+text[x] = toupper(text[x]); 
+}
+}
+return text; 
+}
+int main() 
+{
+cout << Capitalize_first_letter("Write a C++ 
+program");
+cout << "\n" << Capitalize_first_letter("cpp string 
+exercises");
+return 0; 
+}
