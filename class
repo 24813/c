@@ -1,0 +1,644 @@
+/*1. Write a C++ program to implement a class called 
+Circle that has private member variables for radius. 
+Include member functions to calculate the circle's area 
+and circumference.*/
+
+#include <iostream>
+#include <cmath>
+const double PI = 3.14159; 
+class Circle { 
+public:
+double radius; 
+public:
+Circle(double rad): radius(rad) {}
+double calculateArea() {
+return PI * pow(radius, 2); 
+}
+double calculateCircumference() {
+return 2 * PI * radius; 
+}
+};
+int main() {
+double radius;
+std::cout << "Input the radius of the circle: ";
+std::cin >> radius; 
+Circle circle(radius); 
+double area = circle.calculateArea(); 
+std::cout << "Area: " << area << std::endl; 
+double circumference = circle.calculateCircumference(); 
+std::cout << "Circumference: " << circumference <<
+std::endl; 
+return 0; 
+}
+
+/*--------------------------------------------------------
+-------------
+Write a C++ program to implement a class called Circle 
+that has private member variables for radius. Include 
+member functions to calculate the circle's area and 
+circumference.*/
+
+#include <iostream>
+#include <cmath>
+const double PI = 3.14159; 
+class Circle { 
+private:
+double radius; 
+public:
+Circle(double rad): radius(rad) {}
+double calculateArea() {
+return PI * pow(radius, 2); 
+}
+double calculateCircumference() {
+return 2 * PI * radius;
+}
+};
+int main() {
+double radius;
+cout << "Input the radius of the circle: ";
+cin >> radius; 
+Circle circle(radius);
+double area = circle.calculateArea(); 
+cout << "Area: " << area << std::endl;
+double circumference = circle.calculateCircumference(); 
+cout << "Circumference: " << circumference << std::endl; 
+return 0;
+}
+
+/*--------------------------------------------------------
+-----------------
+Write a C++ program to implement a class called Circle 
+that has private member variables for radius. Include 
+member functions to calculate the circle's area and 
+circumference.*/
+
+#include <iostream>
+#include <cmath>
+const double PI = 3.14159; 
+class Circle { 
+private:
+double radius; 
+public:
+Circle(double rad): radius(rad) {}
+double calculateArea() {
+return PI * pow(radius, 2); 
+} 
+double calculateCircumference() {
+return 2 * PI * radius; 
+} 
+};
+int main() {
+double radius;
+cout << "Input the radius of the circle: ";
+cin >> radius; 
+Circle circle(radius); 
+double area = circle.calculateArea(); 
+cout << "Area: " << area << std::endl; 
+double circumference = circle.calculateCircumference(); 
+cout << "Circumference: " << circumference << endl; 
+return 0;
+}
+
+/*--------------------------------------------------------
+-----------
+
+Write a C++ program to create a class called Rectangle 
+that has private member variables for length and width. 
+Implement member functions to calculate the rectangle's 
+area and perimeter.*/
+
+#include <iostream>
+class Rectangle {
+private:
+double length; 
+double width; 
+public:
+Rectangle(double len, double wid): length(len), 
+width(wid) {}
+double calculateArea() {
+return length * width; 
+} 
+double calculatePerimeter() {
+return 2 * (length + width); 
+} 
+};
+int main() {
+double length, width;
+cout << "Input the length of the rectangle: ";
+cin >> length; 
+cout << "Input the width of the rectangle: ";
+cin >> width;
+Rectangle rectangle(length, width);
+double area = rectangle.calculateArea(); 
+cout << "\nArea: " << area << endl; 
+double perimeter = rectangle.calculatePerimeter(); 
+cout << "Perimeter: " << perimeter << endl; 
+return 0;
+}
+
+/*--------------------------------------------------------
+--------------
+
+Write a C++ program to create a class called Person that 
+has private member variables for name, age and country. 
+Implement member functions to set and get the values of 
+these variables.*/
+
+#include <iostream>
+#include <string>
+class Person { 
+private:
+string name; 
+int age; 
+std::string country; 
+public:
+void setName(const std::string & n) { 
+name = n; 
+}
+void setAge(int a) { 
+age = a;
+}
+void setCountry(const std::string & c) { 
+country = c; 
+}
+std::string getName() { 
+return name; 
+}
+int getAge() {
+return age; 
+}
+string getCountry() { 
+return country; 
+}
+};
+int main() {
+Person person;
+person.setName("Saveli Sujatha"); 
+person.setAge(25); 
+person.setCountry("USA"); 
+cout << "Name: " << person.getName() << endl; 
+cout << "Age: " << person.getAge() << endl; 
+cout << "Country: " << person.getCountry() << endl; 
+return 0; }
+
+/*--------------------------------------------------------
+-----------
+Write a C++ program to create a class called Car that has 
+private member variables for company, model, and year. 
+Implement member functions to get and set these 
+variables.*/
+
+#include <iostream>
+#include <string>
+#include <iostream>
+#include <string>
+class Car { 
+private:
+string company; 
+string model; 
+int year; 
+public:
+Car(const string & comp, const string & mdl, int yr): 
+company(comp), model(mdl), year(yr) {}
+string getCompany() { 
+return company; 
+}
+string getModel() { 
+return model;
+}
+int getYear() { 
+return year; 
+}
+void setCompany(const string & comp) { 
+company = comp; 
+} 
+void setModel(const string & mdl) { 
+model = mdl; 
+} 
+void setYear(int yr) { 
+year = yr; 
+} 
+};
+int main() {
+Car car("AUDI", "A6", 2023);
+cout << "Company: " << car.getCompany() << endl; 
+cout << "Model: " << car.getModel() << endl;
+cout << "Year: " << car.getYear() << endl; 
+car.setCompany("BMW"); 
+car.setModel("M4"); 
+car.setYear(2022); 
+cout << "\nUpdated Company: " << car.getCompany() 
+<<endl; 
+cout << "Updated Model: " << car.getModel() << endl; 
+cout << "Updated Year: " << car.getYear() << endl;
+return 0; 
+}
+
+/*--------------------------------------------------------
+------------------
+Write a C++ program to implement a class called 
+BankAccount that has private member variables for account 
+number and balance. Include member functions to deposit 
+and withdraw money from the account.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+class BankAccount { 
+private:
+string accountNumber;
+double balance; 
+public:
+BankAccount(const string & accNum, double
+initialBalance): accountNumber(accNum), 
+balance(initialBalance) {}
+void deposit(double amount) {
+balance += amount; 
+cout << "Deposit successful. Current balance: " <<
+balance << endl; 
+} 
+void withdraw(double amount) {
+if (amount <= balance) { 
+balance -= amount; 
+cout << "Withdrawal successful. Current balance: "
+<< balance << endl; 
+} else {
+cout << "Insufficient balance. Cannot withdraw."
+<< endl;
+}
+}
+};
+int main() {
+string sacno = "SB-123"; 
+double Opening_balance, deposit_amt, withdrawal_amt; 
+Opening_balance = 1000; 
+cout << "A/c. No." << sacno << " Balance: " <<
+Opening_balance << endl; 
+BankAccount account(sacno, 1000.0); 
+deposit_amt = 1500; 
+cout << "Deposit Amount: " << deposit_amt << endl;
+account.deposit(deposit_amt); 
+withdrawal_amt = 750; 
+cout << "Withdrawal Amount: " << withdrawal_amt << endl; 
+account.withdraw(withdrawal_amt); 
+withdrawal_amt = 1800; 
+cout << "Attempt to withdrawal Amount: " <<
+withdrawal_amt << endl; 
+account.withdraw(withdrawal_amt); 
+return 0; 
+}
+
+/*--------------------------------------------------------
+------------
+Code to show the working of default constructor*/
+
+#include <iostream>
+using namespace std;
+class Person{
+private:
+string name;
+int age;
+public:
+Person()
+{
+cout<<"Default constructor is called"<<endl;
+name = "student";
+age = 12;
+}
+void display()
+{
+cout<<"Name of current object: "<<name<<endl;
+cout<<"Age of current object: "<<age<<endl;
+}
+};
+int main() 
+{
+Person obj;
+obj.display();
+return 0;
+}
+
+/*________________________________________________________
+_
+Code to understand the working of the parameterized 
+constructor*/
+
+#include <iostream>
+using namespace std;
+class Person{
+private:
+string name;
+int age;
+public:
+Person(string person_name)
+{
+cout<<"Constructor to set name is called"<<endl;
+name = person_name;
+age = 12;
+}
+Person(int person_age)
+{
+cout<<"Constructor to set age is called"<<endl;
+name = "Student";
+age = person_age;
+}
+Person(string person_name, int person_age)
+{
+cout<<"Constructor for both name and age is 
+called"<<endl;
+name = person_name;
+age = person_age;
+}
+void display()
+{
+cout<<"Name of current object: "<<name<<endl;
+cout<<"Age of current object: "<<age<<endl;
+cout<<endl;
+}
+};
+int main() 
+{
+Person obj1("First person");
+obj1.display();
+Person obj2(25);
+obj2.display();
+Person obj3("Second person",15);
+obj3.display();
+return 0;}
+
+/*________________________________________________________
+________________________
+Code to understand the working of the copy constructor*/
+#include <iostream>
+using namespace std;
+class Person{
+private:
+string name;
+int age;
+public:
+Person(string person_name, int person_age)
+{
+cout<<"Constructor for both name and age is 
+called"<<endl;
+name = person_name;
+age = person_age;
+}
+Person(const Person& obj)
+{
+cout<<"Copy constructor is called"<<endl;
+name = obj.name;
+age = obj.age;
+}
+void display()
+{
+cout<<"Name of current object: "<<name<<endl;
+cout<<"Age of current object: "<<age<<endl;
+cout<<endl;
+}
+};
+int main() 
+{
+Person obj1("First person",25);
+obj1.display();
+Person obj2(obj1);
+obj2.display();
+return 0;
+}
+/*________________________________________________________
+___________________
+Here is a program to overload two constructors, one to set 
+the name and age of a student with no parameters, and the 
+second to set the name and age of a student with a twoparameter.
+C++ program to demonstrate constructor overloading.*/
+#include <iostream>
+using namespace std;
+class Student {
+private:
+string Name;
+int Age;
+public:
+Student() {
+Name = "Rohan";
+Age = 23;
+}
+Student(string str, int x) {
+Name = str;
+Age = x;
+}
+string get_Name() {
+return Name;
+}
+int get_Age() {
+return Age;
+}
+};
+int main() {
+Student stu1, stu2("Mohit", 25);
+cout << "Student1 Name: " << stu1.get_Name() << " 
+Student1 Age: " << stu1.get_Age() << endl;
+cout << "Student2 Name: " << stu2.get_Name() << " 
+Student2 Age: " << stu2.get_Age() << endl;
+return 0;
+}
+/*________________________________________________________
+_______________________
+Here is a program to overload three constructors, one to 
+set the area with no parameters, 
+the second to set the area with one parameter, and the 
+third to set the area with two parameters.*/
+#include <iostream>
+using namespace std;
+class Area {
+public:
+int area;
+Area() {
+area = 0;
+}
+Area(int side) {
+area = side * side;
+}
+Area(int length, int width) {
+area = length * width;
+}
+int disp() {
+return area;
+}
+};
+int main() {
+Area obj1;
+Area obj2(6);
+Area obj3(8, 5);
+cout << "Area of obj1: " << obj1.disp() << endl;
+cout << "Area of obj2: " << obj2.disp() << endl;
+cout << "Area of obj3: " << obj3.disp() << endl;
+return 0;
+}
+/*________________________________________________________
+____________
+destructor */
+#include <iostream>
+using namespace std;
+class Test{ 
+public :
+Test(){
+cout << "Test class object created.";
+}
+~Test(){
+cout << endl << "Test class object destroyed.";
+}
+};
+int main() {
+Test testObj;
+return 0;
+}
+/*___________________________________________________
+Static Fields*/
+#include <iostream>
+using namespace std;
+class Box {
+public:
+static int objectCount;
+Box(double l = 2.0, double b = 2.0, double h = 2.0) 
+{
+cout <<"Constructor called." << endl;
+length = l;
+breadth = b;
+height = h;
+objectCount++;
+}
+double Volume() {
+return length * breadth * height;
+}
+private:
+double length; 
+double breadth; 
+double height; 
+};
+int Box::objectCount = 0;
+int main(void) {
+Box Box1(3.3, 1.2, 1.5); 
+Box Box2(8.5, 6.0, 2.0); 
+cout << "Total objects: " << Box::objectCount << endl;
+return 0;
+}
+/*----------------------------------------------*/
+#include <iostream>
+using namespace std;
+class A {
+public:
+static int year;
+static int price ;
+static string model;
+A(int a,int b,string c)
+{year=a;
+price=b;
+model=c;}
+A()
+{year=2000;
+price= 100;
+model= "golf";}
+static void print() {
+cout << "A::staic method is called\n"; 
+cout<<"yaer is " <<year<<"\t"<<"price is 
+"<<price<<"\t"<<
+" model is"<<model<<"\t"<<endl ;
+}
+};
+int A::year=2000;
+int A:: price= 100;
+string A:: model= "golf"; 
+int main() {
+A::print();
+A a(2022,500000,"BMW");
+a.print();
+A::print();
+}
+/*------------------------------------------------*/
+/#include <iostream>
+using namespace std;
+class Box {
+public:
+static int objectCount;
+Box(double l = 2.0, double b = 2.0, double h = 2.0) 
+{
+cout <<"Constructor called." << endl;
+length = l;
+breadth = b;
+height = h;
+objectCount++;
+}
+double Volume() {
+return length * breadth * height;
+}
+static int getCount() {
+return objectCount;
+}
+private:
+double length; 
+double breadth; 
+double height; 
+};
+int Box::objectCount = 0;
+int main(void) {
+cout << "Inital Stage Count: " << Box::getCount() <<
+endl;
+Box Box1(3.3, 1.2, 1.5); 
+Box Box2(8.5, 6.0, 2.0); 
+cout << "Final Stage Count: " << Box::getCount() <<
+endl;
+return 0;
+}
+/*--------------------------------------------------------
+------------*/
+#include<iostream>
+using namespace std;
+class Test
+{
+public:
+int x;
+int y;
+public:
+Test(int x , int y ) { this->x = x; this->y = y; }
+Test( ) 
+{ this->x = 26; this->y = 20; }
+void print() { cout << "x = " << x << " y = " << y <<
+endl; }
+};
+int main()
+{
+Test obj;
+obj.print();
+Test o (11 ,10);
+o.print();
+return 0;
+}
+/*---------------------------------------------------*/
+#include<iostream>
+using namespace std;
+class Test
+{
+public:
+int x[30];
+public:
+void input(int z)
+{
+for (int i =0;i<z;i++)
+{
+cout<<"enter element of array"<<endl;
+cin>>x[i];
+}
+}
+void print() 
+{ for (int i =0;i<sizeof(x);i++)
+cout << x[i]<< endl; }
+};
+int main()
+{
+Test obj;
+int y;
+cout<<"enter size of array"<<endl;
+cin>>y;
+obj.input(y);
+obj.print();
+return 0;
+} 
