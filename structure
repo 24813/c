@@ -1,0 +1,154 @@
+structure:*/
+
+#include<iostream>
+using namespace std;
+struct emp{
+int id;
+char name[10];
+float salary;
+};
+int main( )
+{ struct emp x[5];
+int i;
+for(i=0;i<5;i++)
+{cout<<"\t ID "<<i<<"= ";
+cin>>x[i].id;
+cout<<"\t Name= ";
+cin>>x[i].name;
+cout<<"\t Salary= ";
+cin>>x[i].salary;
+}
+for(i=0;i<5;i++)
+{
+cout<<"\n \t ID= "<<x[i].id;
+cout<<"\t Name= "<<x[i].name;
+cout<<"\t Salary= "<<x[i].salary;
+}
+}
+
+/*--------------------------------------------------------
+-----------*/
+
+#include<iostream>
+using namespace std;
+struct date{
+int day;
+int month;
+int year;
+};
+struct bankaccount{
+int id;
+char name[10];
+float balance;
+int acc_num;
+date birth_day;
+};
+int main( )
+{ struct bankaccount x;
+int i;
+// for(i=0;i<5;i++)
+// {
+cout<<"\t ID "<<i<<"= ";
+cin>>x.id;
+cout<<"\t Name= ";
+cin>>x.name;
+cout<<"\t balance= ";
+cin>>x.balance;
+cout<<"\t acc_num= ";
+cin>>x.acc_num;
+cout<<"\t birth_day: ";
+cin>>x.birth_day.day;
+cin>>x.birth_day.month;
+cin>>x.birth_day.year;
+// }
+// for(i=0;i<5;i++)
+{
+cin>>x.id;
+cout<<"\t Name= ";
+cout<<x.name;
+cout<<"\t balance= ";
+cout<<x.balance;
+cout<<"\t acc_num= ";
+cout<<x.acc_num;
+cout<<"\t birth_day= ";
+cout<<x.birth_day.day<<"/"<<x.birth_day.month<<"/"<<x.bi
+rth_day.year;
+}
+}
+
+/*--------------------------------------------------------
+------------*/
+
+#include<iostream>
+using namespace std;
+struct date{
+int day;
+int month;
+int year;
+};
+struct bankaccount{
+int id;
+char name[10];
+float balance;
+int acc_num;
+date birth_day;
+};
+int main( )
+{ struct bankaccount x[3];
+int i;
+for(i=0;i<3;i++)
+{
+cout<<"\t ID "<<i<<"= ";
+cin>>x[i].id;
+cout<<"\t Name= ";
+cin>>x[i].name;
+cout<<"\t balance= ";
+cin>>x[i].balance;
+cout<<"\t acc_num= ";
+cin>>x[i].acc_num;
+cout<<"\t birth_day: ";
+cin>>x[i].birth_day.day;
+cin>>x[i].birth_day.month;
+cin>>x[i].birth_day.year;
+}
+for(i=0;i<3;i++)
+{cout<<"\n Id= ";
+cout<<x[i].id;
+cout<<"\t Name= ";
+cout<<x[i].name;
+cout<<"\t balance= ";
+cout<<x[i].balance;
+cout<<"\t acc_num= ";
+cout<<x[i].acc_num;
+cout<<"\t birth_day= ";
+cout<<x[i].birth_day.day<<"/"<<x[i].birth_day.month<<"/"
+<<x[i].birth_day.year;
+}
+}
+
+/*--------------------------------------------------------
+-------------*/
+
+#include <iostream>
+using namespace std;
+struct student{ char name[5];
+int id;
+float GPA;
+};
+int main() 
+{ struct student x[3]; 
+int i;
+for(i=0; i<3; i++)
+{
+cout<<"x===>id, name, GPA=";
+cin>>x[i].id>>x[i].name>>x[i].GPA;
+}
+for(i=0; i<3; i++)
+{
+x[i].GPA = x[i].GPA + 0.5;
+}
+for(i=0; i<3; i++)
+{
+cout<<"\n x===>id="<<x[i].id<<"\t name="<<x[i].name<<"\t
+GPA="<<x[i].GPA;
+ }
