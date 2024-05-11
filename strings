@@ -10,7 +10,7 @@ string temp_str = str;
 int index_pos = 0; 
 for (int x = temp_str.length()-1; x >= 0; x--) 
 {
-str[index_pos] = temp_str[x]; 
+str[index_pos] = temp_str[x];  
 index_pos++; 
 }
 return str; 
