@@ -147,7 +147,7 @@ cout<<arr[i]<<"\t";
 return 0;
 }
 ==================================================================================================================
-/*=6=some method of array with example :size:*/
+/*=7=some method of array with example :size:*/
 
 #include <array>
 #include <iostream>
@@ -158,7 +158,7 @@ std::cout << "nums contains " << nums.size() << "
 elements.\n";
 }
 ==================================================================================================================
-/*"7":emptyand at to set and return spacific value :*/
+/*"8":emptyand at to set and return spacific value :*/
 #include <array>
 #include <iostream>
 int main()
@@ -177,7 +177,7 @@ cout << "Element at index 2 has value " << data.at(2)
 scout << "data size = " << data.size() << '\n';
 }
 ==================================================================================================================
-/*"8":front and back:*/
+/*"9":front and back:*/
 #include <array>
 #include <iostream>
 int main()
